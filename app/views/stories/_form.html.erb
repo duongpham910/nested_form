@@ -1,0 +1,12 @@
+<%= form_for @story do |f| %>
+  <%= f.label :status %>
+  <%= f.text_field :status, class: "form-control" %>
+  <div style="color:red;">User_Comment:</div>
+  <div id="comments_filed">
+  <%= f.fields_for :comments do |ff| %>
+    <%= render "comment_fields", ff: ff %>
+  <% end %>
+  <%= link_to_add_comment "More comment",f, :comments %>
+  </div>
+  <%= f.submit "submit", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,16 @@
+<div align="center">
+  <%= link_to "add new story", new_story_path,
+    class: "btn btn-primary" %>
+</div>
+<% @stories.each do |story| %>
+  <div class="row">
+    <div class="col-md-2">
+      <%= story.status %>
+    </div>
+    <div class="col-md-10">
+      <% story.comments.each do |comment| %>
+        <%= comment.content %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
