@@ -2,8 +2,9 @@
 lock "~> 3.11.0"
 
 set :application, "nested_form"
-set :repo_url, "git@github.com:duongpham910/rails_girls.git"
+set :repo_url, "git@github.com:duongpham910/nested_form.git"
 set :bundle_binstubs, nil
+set :branch, "develop"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/html/#{fetch(:application)}"
